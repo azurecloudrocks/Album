@@ -1,0 +1,9 @@
+C:\Users\puluka\Desktop\Azure Stuff\AlbumPOC\Source\ImageUploader\bin\Debug\ImageUploader.exe.config
+C:\Users\puluka\Desktop\Azure Stuff\AlbumPOC\Source\ImageUploader\bin\Debug\ImageUploader.exe
+C:\Users\puluka\Desktop\Azure Stuff\AlbumPOC\Source\ImageUploader\bin\Debug\ImageUploader.pdb
+C:\Users\puluka\Desktop\Azure Stuff\AlbumPOC\Source\ImageUploader\obj\Debug\ImageUploader.ImageSelector.resources
+C:\Users\puluka\Desktop\Azure Stuff\AlbumPOC\Source\ImageUploader\obj\Debug\ImageUploader.Properties.Resources.resources
+C:\Users\puluka\Desktop\Azure Stuff\AlbumPOC\Source\ImageUploader\obj\Debug\ImageUploader.csproj.GenerateResource.Cache
+C:\Users\puluka\Desktop\Azure Stuff\AlbumPOC\Source\ImageUploader\obj\Debug\ImageUploader.exe
+C:\Users\puluka\Desktop\Azure Stuff\AlbumPOC\Source\ImageUploader\obj\Debug\ImageUploader.pdb
+C:\Users\puluka\Desktop\Azure Stuff\AlbumPOC\Source\ImageUploader\obj\Debug\ImageUploader.csprojResolveAssemblyReference.cache

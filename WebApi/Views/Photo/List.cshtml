@@ -1,0 +1,108 @@
+﻿@{
+    ViewBag.Title = "Photo";
+}
+
+ <div id="imageContainer" class="content" >
+        <!-- end .content -->
+    </div>
+@model IEnumerable<DataAccess.Models.ImageItemEntity>
+@using (Html.BeginForm("Download", "Photo"))
+{
+
+    <div class="preview">
+    <div style="text-align:center;" >
+        <span id="spnPreview" style="font-weight:bolder;"></span>
+        </div>
+        <div id="ZoomContainer" class="preview">
+        
+        </div>
+        
+        <div id="PhotoThumbs" class="panel">
+            @if (Model.Count() > 0)
+            {
+                @Html.Hidden("photosetId", ViewData["PhotosetId"])
+
+                <div>
+                    <input type="submit" class="DownloadAll" /></div>
+                foreach (var item in Model)
+                {
+                <div class="thumbnail">
+                    <a class="ThumbLink" href='@item.DziUri' name="photo" title="@item.RowKey">
+                        <img src="@item.ThumbnailUri" alt="@item.RowKey" class="thumb"/>
+                    </a>
+                    <span>@item.RowKey</span>
+                </div>
+                    //Write all photo Url to a hidden field - this will be used on form submit for downloading all.
+                @Html.Hidden("Photo", item.BlobUri)
+                }
+
+            }
+            else
+            {
+                <div>
+                    No pictures to display.
+                </div>
+            }
+        </div>
+    </div>
+}
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        if (parseInt('@Model.Count()') > 0) {
+            //Initialize seadragon viewer.
+            var viewer = new Seadragon.Viewer("ZoomContainer");
+
+            function onViewerOpen(event) {
+                var touchController = new Seadragon.TouchController(viewer);
+            }
+
+            viewer.addEventListener('open', onViewerOpen);
+
+            var dziUrl;
+
+            function LoadZoom(url) {
+                dziUrl = url;
+                $.ajax({
+                    url: "/Photo/GetDziContent?url=" + url,
+                    dataType: "json",
+                    success: onZoomitResponse,
+                    error: function (data, error) { alert(error); }
+                });
+            }
+
+            // Response handler.
+            function onZoomitResponse(resp) {
+                var content = resp.XmlContent;
+                $('#ProgressImage').hide();
+                $('#container').fadeIn();
+                viewer.openDzi(dziUrl, content);
+            }
+
+            //Get first image and display on load.
+            var firstImageLink = $('.ThumbLink').first()[0];
+            if (firstImageLink && firstImageLink.href) {
+                $('#spnPreview').text(firstImageLink.parentNode.children[1].innerHTML);
+                LoadZoom(firstImageLink.href);
+            }
+
+            //Bind click event to display selected image on zoom area.
+            $('.ThumbLink').click(function () {
+                $('#ProgressImage').show();
+                $('#spnPreview').text($(this).next().text());
+                LoadZoom(this.href);
+                return false;
+            });
+
+            $('.searchpreview').resize();
+        }
+
+      
+        else {
+            $('#ZoomContainer').hide();
+        }
+
+    });
+</script>
+ 

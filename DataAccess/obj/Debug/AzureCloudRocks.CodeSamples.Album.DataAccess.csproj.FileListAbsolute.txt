@@ -1,0 +1,5 @@
+C:\AzureCloudRocks\CodeSamples\Album\DataAccess\bin\Debug\AzureCloudRocks.CodeSamples.Album.DataAccess.dll
+C:\AzureCloudRocks\CodeSamples\Album\DataAccess\bin\Debug\AzureCloudRocks.CodeSamples.Album.DataAccess.pdb
+C:\AzureCloudRocks\CodeSamples\Album\DataAccess\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\AzureCloudRocks\CodeSamples\Album\DataAccess\obj\Debug\AzureCloudRocks.CodeSamples.Album.DataAccess.dll
+C:\AzureCloudRocks\CodeSamples\Album\DataAccess\obj\Debug\AzureCloudRocks.CodeSamples.Album.DataAccess.pdb

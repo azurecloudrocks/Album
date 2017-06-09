@@ -1,0 +1,8 @@
+C:\AzureCloudRocks\CodeSamples\Album\ImageUploader\bin\Debug\AzureCloudRocks.CodeSamples.Album.ImageUploader.exe.config
+C:\AzureCloudRocks\CodeSamples\Album\ImageUploader\bin\Debug\AzureCloudRocks.CodeSamples.Album.ImageUploader.exe
+C:\AzureCloudRocks\CodeSamples\Album\ImageUploader\bin\Debug\AzureCloudRocks.CodeSamples.Album.ImageUploader.pdb
+C:\AzureCloudRocks\CodeSamples\Album\ImageUploader\obj\Debug\AzureCloudRocks.CodeSamples.Album.ImageUploader.ImageSelector.resources
+C:\AzureCloudRocks\CodeSamples\Album\ImageUploader\obj\Debug\AzureCloudRocks.CodeSamples.Album.ImageUploader.Properties.Resources.resources
+C:\AzureCloudRocks\CodeSamples\Album\ImageUploader\obj\Debug\AzureCloudRocks.CodeSamples.Album.ImageUploader.csproj.GenerateResource.Cache
+C:\AzureCloudRocks\CodeSamples\Album\ImageUploader\obj\Debug\AzureCloudRocks.CodeSamples.Album.ImageUploader.exe
+C:\AzureCloudRocks\CodeSamples\Album\ImageUploader\obj\Debug\AzureCloudRocks.CodeSamples.Album.ImageUploader.pdb

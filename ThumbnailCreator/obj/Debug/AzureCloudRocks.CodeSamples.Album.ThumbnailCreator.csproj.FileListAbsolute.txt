@@ -1,0 +1,14 @@
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\bin\Debug\AzureCloudRocks.CodeSamples.Album.ThumbnailCreator.dll.config
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\bin\Debug\AzureCloudRocks.CodeSamples.Album.ThumbnailCreator.dll
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\bin\Debug\AzureCloudRocks.CodeSamples.Album.ThumbnailCreator.pdb
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\bin\Debug\AzureCloudRocks.CodeSamples.Album.DataAccess.dll
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\bin\Debug\DeepZoomTools.DLL
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\bin\Debug\Microsoft.WindowsAzure.Configuration.dll
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\bin\Debug\Microsoft.WindowsAzure.Diagnostics.dll
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\bin\Debug\MonAgentListener.dll
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\bin\Debug\AzureCloudRocks.CodeSamples.Album.DataAccess.pdb
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\bin\Debug\Microsoft.WindowsAzure.Configuration.xml
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\obj\Debug\AzureCloudRocks.CodeSamples.Album.ThumbnailCreator.csprojResolveAssemblyReference.cache
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\obj\Debug\AzureCloudRocks.CodeSamples.Album.ThumbnailCreator.dll
+C:\AzureCloudRocks\CodeSamples\Album\ThumbnailCreator\obj\Debug\AzureCloudRocks.CodeSamples.Album.ThumbnailCreator.pdb

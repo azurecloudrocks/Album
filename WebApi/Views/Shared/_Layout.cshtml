@@ -1,0 +1,71 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/Scripts/seadragon-min.js")
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#ProgressImage').hide();
+
+            $('#btnSearch').click(function () {
+                if ($('#txtVin').val().length > 0) {
+                    $('#ProgressImage').show();
+                    $.ajax({
+                        url: '/Photo/Index?id=' + $('#txtVin').val(),
+                        type: "POST",
+                        success: function (response, status, xhr) {                           
+                            var imgContainer = $('#mainpage');
+                            imgContainer.html('');
+                            imgContainer.html(response);
+                           
+                            //$('#ProgressImage').hide();
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            alert('Unable to load photos');
+                            $('#ProgressImage').hide();
+                        }
+                    });
+                }
+                return false;
+            });
+          
+            $('.vinLink').click(function () {
+                $('#ProgressImage').show();
+                $.ajax({
+                    url: this.href,
+                    type: "GET",
+                    success: function (response, status, xhr) {
+                        var jqContainer = $('#imageContainer');
+                        jqContainer.html(response);
+                        $('#ProgressImage').hide();
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert('Unable to load photos');
+                        $('#ProgressImage').hide();
+                    }
+                });
+                return false;
+            });
+        });
+
+</script>
+</head>
+<body>
+ @* <div class="header">
+        <a href="#">
+            <img src="/Content/Images/logo.png" alt="EMC" name="Insert_logo" width="70px"
+                height="70px" id="Insert_logo" style="background: #692b71; display: block;" /></a>
+        <!-- end .header -->
+    </div>*@
+    @RenderBody()
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Cloud Album";
+}
+@model IEnumerable<string>
+ 
+<div id="mainpage" class="container" style="background-color:#b5a3b7" >
+    <div class="header">
+        <a href="#">
+            <img src="/Content/Images/logo.png" alt="Cloud Album Logo" name="Insert_logo" 
+                 height="70px" id="Insert_logo" style="display: block;" />
+        </a>
+    </div>
+    <div class="sidebar1">
+        <div id="ProgressImage">
+            <img src="/Content/Images/ajax-loader.gif" alt="Loading..." />
+        </div>
+        <div id="navContainer">
+        <label style="color:black">Select an Album....</label>
+        
+        <ul class="nav">
+            @foreach (var item in Model)
+            {
+                <li>@Html.ActionLink(@AzureCloudRocks.CodeSamples.Album.WebApi.Extensions.AppendTicksAsDateTime(item), "Search", "Photo", new { id = item }, new { @class = "vinLink" })</li>
+            }
+       
+        </ul>
+        </div>
+        <!-- end .sidebar1 -->
+    </div>
+    <div id="imageContainer" class="content" >
+        <!-- end .content -->
+    </div>
+    <!-- end .container -->
+</div>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#ProgressImage').hide();
+
+            $('.vinLink').click(function () {
+                $('#ProgressImage').show();
+                $.ajax({
+                    url: this.href,
+                    type: "GET",
+                    success: function (response, status, xhr) {
+                        var jqContainer = $('#imageContainer');
+                        jqContainer.html(response);
+                        $('#ProgressImage').hide();
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert('Unable to load photos');
+                        $('#ProgressImage').hide();
+                    }
+                });
+                return false;
+            });
+        });
+
+</script>

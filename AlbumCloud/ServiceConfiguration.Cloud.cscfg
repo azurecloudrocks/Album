@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="ThumbnailCreator.Worker" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="2" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="AzureCloudRocks.CodeSamples.Album.ThumbnailCreator">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="ImageBlobContainer" value="images" />
+      <Setting name="ImageQueue" value="images" />
+      <Setting name="WorkerSleepTime" value="1000" />
+      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=gsedemostroage;AccountKey=v7JxjNsoxtwrGyMd493Uhh2qRqvb6ABmrVJQxkPJqxBd3gPa0G+6u2SyXv7bDaWugj+W3+LAzJWHgsAwB0rXjA==" />
+      <Setting name="ThumbnailBlobContainer" value="thumbnails" />
+      <Setting name="PoisonDequeueLimit" value="3" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+  </Role>
+  <Role name="AzureCloudRocks.CodeSamples.Album.WebApi">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="DataConnectionString" value="DefaultEndpointsProtocol=https;AccountName=gsedemostroage;AccountKey=v7JxjNsoxtwrGyMd493Uhh2qRqvb6ABmrVJQxkPJqxBd3gPa0G+6u2SyXv7bDaWugj+W3+LAzJWHgsAwB0rXjA==" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

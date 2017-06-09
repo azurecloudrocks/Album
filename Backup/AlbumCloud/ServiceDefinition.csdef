@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition name="ThumbnailCreator.Worker" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
+  <WorkerRole name="ThumbnailCreator" vmsize="Small">
+    <Imports>
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="ImageBlobContainer" />
+      <Setting name="ImageQueue" />
+      <Setting name="WorkerSleepTime" />
+      <Setting name="DataConnectionString" />
+      <Setting name="ThumbnailBlobContainer" />
+      <Setting name="PoisonDequeueLimit" />
+    </ConfigurationSettings>
+    <LocalResources>
+      <LocalStorage name="DZITemp" cleanOnRoleRecycle="true" sizeInMB="1024" />
+    </LocalResources>
+  </WorkerRole>
+  <WebRole name="WebApi" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+    </Endpoints>
+    <Imports>
+    </Imports>
+    <ConfigurationSettings>
+      <Setting name="DataConnectionString" />
+    </ConfigurationSettings>
+    <Startup>
+      <Task commandLine="startup\disableTimeout.cmd" executionContext="elevated" />
+    </Startup>
+  </WebRole>
+</ServiceDefinition>
